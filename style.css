@@ -1,0 +1,161 @@
+:root {
+	/* Fonts */
+	--ff-sans: "Work Sans", sans-serif;
+
+	--fw-light: 400;
+	--fw-normal: 600;
+	--fw-bold: 700;
+
+	--fs-paragraph: 16px;
+
+	/* Colors */
+	--color-white: hsl(0, 0%, 100%);
+	--color-lightPink: hsl(275, 100%, 97%);
+	--color-grayPurple: hsl(292, 16%, 49%);
+	--color-darkPurple: hsl(292, 42%, 14%);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: auto;
+	margin: 0;
+
+	font-family: var(--ff-sans);
+	font-size: var(--fs-paragraph);
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	width: 80%;
+	height: 550px;
+	background-color: var(--color-lightPink);
+	margin-bottom: 0.5rem;
+
+	position: relative;
+}
+
+.card-body {
+	display: flex;
+	position: relative;
+	height: 65%;
+	flex-wrap: wrap;
+	line-height: 3rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	width: 35%;
+	font-size: 12px;
+	border-radius: 10px;
+	padding: -30px;
+	background-color: white;
+	margin: -10% 30% -10%;
+}
+
+.star-icon {
+	float: left;
+	margin-top: 3px;
+	margin-left: 31px;
+	padding-right: 5px;
+	width: 22px;
+}
+
+.card-title {
+	font-size: 30px;
+	padding-left: 5px;
+}
+
+.card-list {
+	width: 100%;
+	margin-top: -50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card-list ul {
+	margin: 0;
+}
+
+.card-list ul li {
+	list-style: none;
+	font-weight: var(--fw-bold);
+}
+
+.card-list svg {
+	float: inline-end;
+	margin-top: 7px;
+	margin-right: 10px;
+	width: 1.3rem;
+}
+
+.list {
+	font-size: 11.5px;
+	flex-wrap: wrap;
+	margin-top: -10px;
+	margin-right: 1rem;
+	line-height: normal;
+	float: right;
+}
+
+/* Media Screen responsiveness */
+@media screen and (min-width: 375px) and (max-width: 430px) {
+	.card {
+		width: auto;
+		height: auto;
+	}
+
+	.card-body {
+		width: 55%;
+		height: 400px;
+		line-height: 1.3rem;
+		position: relative;
+		margin-bottom: 6rem;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.card-list {
+		margin-left: -15px;
+	}
+
+	.card-list ul li {
+		line-height: 1.2rem;
+		font-size: 10px;
+		margin-right: 15px;
+	}
+
+	.star-icon {
+		float: left;
+		margin-top: -12px;
+		margin-left: 20px;
+		padding-right: 5px;
+		width: 22px;
+	}
+
+	.card-title {
+		font-size: 25px;
+		padding-left: 5px;
+	}
+
+	.list {
+		font-size: 9px;
+		flex-wrap: wrap;
+		line-height: 0.8rem;
+	}
+
+	.card-list svg {
+		width: 15px;
+		float: inline-end;
+		margin-top: auto;
+		position: relative;
+		float: inline-end;
+		margin-right: -12px;
+	}
+
+	.first-minus-svg {
+		float: right;
+		position: relative;
+		margin: auto;
+	}
+}
